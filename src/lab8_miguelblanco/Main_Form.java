@@ -107,6 +107,8 @@ public class Main_Form extends javax.swing.JFrame {
         jFormattedTextField5 = new javax.swing.JFormattedTextField();
         jFormattedTextField6 = new javax.swing.JFormattedTextField();
         jButton8 = new javax.swing.JButton();
+        jd_normal = new javax.swing.JDialog();
+        jLabel21 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         tf_usuario = new javax.swing.JTextField();
         tf_contrasena = new javax.swing.JTextField();
@@ -587,6 +589,27 @@ public class Main_Form extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jLabel21.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel21.setText("COMPRAR");
+
+        javax.swing.GroupLayout jd_normalLayout = new javax.swing.GroupLayout(jd_normal.getContentPane());
+        jd_normal.getContentPane().setLayout(jd_normalLayout);
+        jd_normalLayout.setHorizontalGroup(
+            jd_normalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_normalLayout.createSequentialGroup()
+                .addGap(374, 374, 374)
+                .addComponent(jLabel21)
+                .addContainerGap(405, Short.MAX_VALUE))
+        );
+        jd_normalLayout.setVerticalGroup(
+            jd_normalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_normalLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel21)
+                .addContainerGap(464, Short.MAX_VALUE))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jButton1.setText("LogIn");
@@ -665,15 +688,18 @@ public class Main_Form extends javax.swing.JFrame {
             if (login) {
                 switch (id) {
                     case 1:
-                        this.dispose();
+                        this.setVisible(false);
                         jd_administrador.setModal(true);
                         jd_administrador.pack();
                         jd_administrador.setLocationRelativeTo(this);
                         jd_administrador.setVisible(true);
-                        this.setVisible(false);
                         break;
                     default:
-
+                        this.setVisible(false);
+                        jd_normal.setModal(true);
+                        jd_normal.pack();
+                        jd_normal.setLocationRelativeTo(this);
+                        jd_normal.setVisible(true);
                         break;
                 }
             } else {
@@ -1072,6 +1098,7 @@ public class Main_Form extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -1090,6 +1117,7 @@ public class Main_Form extends javax.swing.JFrame {
     private javax.swing.JButton jb_eliminar;
     private javax.swing.JButton jb_modificar;
     private javax.swing.JDialog jd_administrador;
+    private javax.swing.JDialog jd_normal;
     private javax.swing.JTable tabla;
     private javax.swing.JTable tabla2;
     private javax.swing.JTextField tf_contrasena;
